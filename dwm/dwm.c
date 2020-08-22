@@ -1133,7 +1133,7 @@ void manage(Window w, XWindowAttributes *wa)
 	c->x = MAX(c->x, c->mon->mx);
 	/* only fix client y-offset, if the client center might cover the bar */
 	c->y = MAX(c->y, ((c->mon->by == c->mon->my) && (c->x + (c->w / 2) >= c->mon->wx) && (c->x + (c->w / 2) < c->mon->wx + c->mon->ww)) ? bh : c->mon->my);
-	c->bw = borderpx;
+	c->bw = border_width;
 
 	wc.border_width = c->bw;
 	XConfigureWindow(dpy, w, CWBorderWidth, &wc);
@@ -1728,7 +1728,7 @@ void setup(void)
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
-	bh = drw->fonts->h + 2;
+	bh = bar_height ? bar_height : drw->fonts->h + 2;
 	updategeom();
 	/* init atoms */
 	utf8string = XInternAtom(dpy, "UTF8_STRING", False);
