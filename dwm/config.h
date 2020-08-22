@@ -14,12 +14,12 @@
 //
 static const unsigned int border_width  = 5;
 static const int bar_height			    = 55;
-static const unsigned int gappx     = 100;        /* gaps between windows */
+static const unsigned int gappx     = 50;        /* gaps between windows */
 static const unsigned int snap      = 320;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 100;       /* vertical padding of bar */
-static const int sidepad            = 100;       /* horizontal padding of bar */
+static const int vertpad            = 50;       /* vertical padding of bar */
+static const int sidepad            = 50;       /* horizontal padding of bar */
 static const char *fonts[]          = { "hasklig:size=15", "fontawesome:size=20" };
 static const char dmenufont[]       = "hasklig:size=15";
 //  ____      _
